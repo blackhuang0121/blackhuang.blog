@@ -11,88 +11,72 @@
       rel="stylesheet"
     />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>BlackHuang.Blog</title>
+    <title>Blackhuang.Blog</title>
   </head>
   <body>
-    <header>
-      <div class="header">
-        <h1 class="text-xl font-bold">BlacHhuang.Blog</h1>
-        <button id="nav-bar-btn">hambergur button</button>
+    <header class="header">
+      <div class="container">
+        <div class="title">
+            <h1>Blackhuang.blog</h1>
+        </div>
+        <div class="actions">
+            <input type="text" placeholder="Search" class="search">
+            <!-- <div class="burger-menu" id="burger-menu">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </div> -->
+        </div>
       </div>
+      <hr class="hr-white">
+      <nav class="nav-menu" id="nav-menu">
+        <a href="travel.html">🧳 旅遊 Travel</a>
+        <a href="photo.html">📷 攝影 Photo</a>
+        <a href="note.html">✒️ 隨筆 Note</a>
+      </nav>
+      <hr class="hr-white">
     </header>
     <main>
-      <h1 class="text-xl font-bold">Hi, welcome to Blackhuang.blog!</h1>
-      <h2 class="text-l text-blue-600">這是黑人的網站，來到黑人主理的「好好說故事」個人網站</h2>
-      <div class="introduction">
-        <div class="list">
-          <li>期許自己能成為溫暖他人，支持團隊的那份力量。</li>
-          <li>京都的咖啡是悠閒，街道上行人與路過的腳踏車是想念</li>
-        </div>
-        <div class="main-photo">
-          <div class="card">
-            <img src="img/DSCF2135.JPG" alt="blossom" class="w-320 h-320">
-            <div class="m-4">
-              <span class="font-bold">封面照</span>
-              <span class="block text-gray-500 text-sm">封面照描述</span>
-          <div class="bg-secondary-100 text-xs font-bold rounded-full p-2">
-          </div>
-            </div>
-          </div>
+      <hr class="hr-dark">
+      <div class="welcome">
+        <img src="img/DSCF4058.JPG" alt="graffiti" class="welcome-photo">
+        <div class="overlay">
+          <p class="welcome-message">👋 嗨嗨你好！歡迎來到部落格</p>
         </div>
       </div>
-      <hr>
+      <hr class="hr-dark">
       <div class="category-container">
-        <!-- <div class="category-name">
-          <div class="category">
-            <h2>🧳 旅遊</h2>
-            <a href="travel.html">Link to travel</a>
-            <p>放慢腳步，感受那途經每個地方的活力</p>
-          </div>
-          <div class="category">
-            <h2>📷 拍照</h2>
-            <a href="photo.html">Link to photo</a>
-            <p>喜歡照片的底片感，還有隨著光和影不同的色調變化</p>
-          </div>
-          <div class="category">
-            <h2>✒️ 隨筆</h2>
-            <a href="note.html">Link to note</a>
-            <p>用文字咀嚼所見所想，紀錄片刻</p>
-          </div>
-        </div> -->
         <div class="card-list">
-          <div class="card">
+          <div class="card1">
             <div class="bg-gray p-6 rounded-lg shadow-lg">
-              <h4 class="text-2xl font-bold mb-2 text-gray-800">🧳 旅遊</h4>
+              <h4><a href="travel.html" class="text-2xl font-bold mb-2 text-gray-800">🧳 旅遊</a></h4>
               <p class="text-gray-700">放慢腳步，感受那途經每個地方的活力</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card2">
             <div class="bg-gray p-6 rounded-lg shadow-lg">
-              <h4 class="text-2xl font-bold mb-2 text-gray-800">📷 拍照</h4>
+              <h4><a href="photo.html" class="text-2xl font-bold mb-2 text-gray-800" class="text-2xl font-bold mb-2 text-gray-800">📷 拍照</a></h4>
               <p class="text-gray-700">喜歡照片的底片感，還有隨著光和影不同的色調變化</p>
             </div>
           </div>
-          <div class="card">
+          <div class="card3">
             <div class="bg-gray p-6 rounded-lg shadow-lg">
-              <h4 class="text-2xl font-bold mb-2 text-gray-800">✒️ 隨筆</h4>
+              <h4><a href="note.html" class="text-2xl font-bold mb-2 text-gray-800" class="text-2xl font-bold mb-2 text-gray-800">✒️ 隨筆</a></h4>
               <p class="text-gray-700">用文字咀嚼所見所想，紀錄片刻</p>
             </div>
           </div>
         </div>
         <div class="category-image">
-          <img src="img/DSCF2135.JPG" alt="blossom">
-          <!-- <img src="img/DSCF5227.JPG" alt="london">
-          <img src="img/DSCF4058.JPG" alt="graffiti"> -->
+          <img src="img/DSCF2135.JPG" alt="blossom" class="default-image">
+          <img src="img/DSCF5227.JPG" alt="london" class="image2">
+          <img src="img/DSCF4058.JPG" alt="graffiti" class="image3">
         </div>
       </div>
-      <hr>
+      <hr class="hr-dark">
       <div>
         <h2 class="text-2xl text-gray-800 font-bold">最新文章</h2>
-        <i class='bx bxs-chevron-left'></i>
-        <i class='bx bxs-chevron-right' ></i>
         <div class="newest-article">
           <div class="article1">
-            <!-- <h3>Neatherlands</h3> -->
             <div class="hashtag">
               <i class='bx bxs-map'></i>
                 <span>Leiden, Neatherlands</span>
@@ -103,7 +87,6 @@
             </div>
           </div>  
           <div class="article2">
-            <!-- <h3>Neatherlands</h3> -->
             <div class="hashtag">
               <i class='bx bxs-map'></i>
                 <span>Amsterdam, Neatherlands</span>
@@ -114,16 +97,36 @@
             </div>
           </div>
           <div class="article3">
-            <!-- <h3>Neatherlands</h3> -->
             <div class="hashtag">
               <i class='bx bxs-map'></i>
                 <span>Maastricht, Neatherlands</span>
             </div>
             <div class="article-main-section3">
-              <img class="article-image3" src="img/DSCF6525.JPG" alt="dinner"" />
+              <img class="article-image3" src="img/DSCF6525.JPG" alt="dinner" />
               <p class="discription3">馬斯垂克位於荷比邊界，這裡也是慢節奏，早早便開吃</p>
             </div>
           </div>
+          <div class="article3">
+            <div class="hashtag">
+              <i class='bx bxs-map'></i>
+                <span>Maastricht, Neatherlands</span>
+            </div>
+            <div class="article-main-section3">
+              <img class="article-image3" src="img/DSCF6525.JPG" alt="dinner" />
+              <p class="discription3">馬斯垂克位於荷比邊界，這裡也是慢節奏，早早便開吃</p>
+            </div>
+          </div>
+          <div class="article3">
+            <div class="hashtag">
+              <i class='bx bxs-map'></i>
+                <span>Maastricht, Neatherlands</span>
+            </div>
+            <div class="article-main-section3">
+              <img class="article-image3" src="img/DSCF6525.JPG" alt="dinner" />
+              <p class="discription3">馬斯垂克位於荷比邊界，這裡也是慢節奏，早早便開吃</p>
+            </div>
+          </div>
+        </div>
       </div>
       </main>
       <div class="photo-gallery">
@@ -134,14 +137,20 @@
         <img src="img/DSCF6055.JPG" alt="Family">
         <img src="img/DSCF6055.JPG" alt="Family">
         <img src="img/DSCF6055.JPG" alt="Family">
+        <img src="img/DSCF6055.JPG" alt="Family">
+        <img src="img/DSCF6055.JPG" alt="Family">
+        <img src="img/DSCF6055.JPG" alt="Family">
+        <img src="img/DSCF6055.JPG" alt="Family">
       </div>
   </body>
-  <hr>
-  <footer>
-    <p>@2024 All Right Reserved</p>
-  <i class='bx bxl-instagram' link="https://www.instagram.com/blackhuang.jpg/"></i>
-  <i class='bx bxl-gmail' ></i>
-  <i class='bx bxl-linkedin-square' ></i>
+  <hr class="hr-dark">
+  <footer class="footer">
+    <div>
+      <a href="https://www.instagram.com/blackhuang.jpg/" class="text-xl"><i class='bx bxl-instagram'></i></a>
+      <a href="https://www.instagram.com/blackhuang.jpg/" class="text-xl"><i class='bx bxl-gmail'></i></a>
+      <a href="https://www.instagram.com/blackhuang.jpg/" class="text-xl"><i class='bx bxl-linkedin-square'></i></a>
+    </div>
+    <p class="flex justify-center">@2024 All Right Reserved</p>
   </footer>
   <script src="./index.js"></script>
 </html>
