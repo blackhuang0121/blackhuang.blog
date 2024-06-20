@@ -7,6 +7,7 @@ module.exports = {
   output: {
     file: 'public/index.js', // Path and filename for the output bundle.
     format: 'iife', // Bundle format: iife for browser global, cjs for CommonJS, esm for ES Module.
+    name: 'app', // Name of the applicatuion
   },
   plugins: [resolve(), commonjs()],
 };
