@@ -18,10 +18,9 @@
 }
 
 .title {
-    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    text-align: ledt;
+    flex: 1;    
 }
 
 .actions {
@@ -54,6 +53,27 @@
   margin: auto;
   gap: 120px;
   z-index: 1;
+}
+
+.nav-menu a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: white; /* 将线条颜色设置为白色 */
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
 }
 
 /* .down {
@@ -112,7 +132,6 @@ main {
     padding: 10px;
     width: 90%;
     height: 90%;
-    border: 3px solid white;
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -122,9 +141,10 @@ main {
   }
 
   .welcome-message {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     width: 100%;
+    letter-spacing: 10px;
     text-align: center;
     color:  #023047;
     }
@@ -198,6 +218,10 @@ main {
     display: block;
     opacity: 1; 
   }
+
+  .active {
+    display: block;
+}
   
   .newest-article {
     display: flex;
@@ -214,6 +238,7 @@ main {
       display: flex;
       /* max-width: 100%; */
       width: 550px;
+      max-width: 100%;
       flex-direction: column;
       background-color: transparent;
       color: #000000;
@@ -300,8 +325,20 @@ main {
           opacity: 0;
           transition: all 0.3s ease;
         }
+    
+        .photo-gallery-container {
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          margin-top: 10px;
+          margin-left: 15px;
+          gap: 2px;
+          position: relative;
+          width: 100%;
+          height: 350px;
+        }
 
-  .photo-gallery {
+  /* .photo-gallery {
       display: flex;
       overflow: hidden;
       margin-top: 10px;
@@ -311,14 +348,37 @@ main {
       max-width: 100%;
       background: rgb(255, 255, 255);
       color: rgb(255, 255, 255);
-  }
+  } */
 
+  .photo-gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+  }
+  
   .photo-gallery img {
-    flex: 0 0 auto;
-    /* width: 100%; */
-    transition: transform 0.3s ease; /* 添加過渡效果 */
+    max-width: 100%;
+    height: 100%;
   }
 
+  .slide-left, .slide-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .slide-left {
+    left: 0;
+  }
+  
+  .slide-right {
+    right: 0;
+  }
 
   @media(max-width: 768px) {
     .overlay {
@@ -326,12 +386,12 @@ main {
     }
 
     .welcome-message {
-      font-size: 20px;
+      font-size: 24px;
+      letter-spacing: 8px;
     }
 
     .container {
       margin: auto;
-      flex-direction: column;
       margin-bottom: 30px;
     }
 
@@ -352,12 +412,31 @@ main {
   }
 
   @media (max-width: 430px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .actions {
+      margin-left: 0;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search {
+      width: 70%;
+      max-width: 300px; /* 根据需要调整最大宽度 */
+      margin-right: 0;
+    }
+
     .overlay {
       width: 70%;
     }
 
     .welcome-message {
-      font-size: 18px;
+      font-size: 20px;
+      letter-spacing: 6px;
     }
 
     .container {
@@ -395,11 +474,20 @@ main {
       margin-left: 5px;
       gap: 20px;
     }
-
+    /* .photo-gallery {
+        margin-top: 10px;
+        width: 100%;
+        overflow: hidden;
+      } */
+    
     .photo-gallery {
-      margin-top: 10px;
-      width: 100%;
-      overflow: hidden;
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+        
+    .photo-gallery img {
+      max-width: 100%;
+      height: auto;
     }
   }
 
@@ -408,13 +496,6 @@ main {
     border-width: 2px;
     margin: 20px;
   }
-
-  /* .hr-white {
-    border-color:#ffffff;
-    width: 420px;
-    border-width: 0.5px;
-    margin: auto;
-  } */
   
   .footer {
     flex-direction: column;
