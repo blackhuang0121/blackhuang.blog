@@ -5,33 +5,26 @@
   width: 100%;
   background-color: #023047;
   color: white;
-  padding: 16px 0;
+  padding: 20px;
+  z-index: 1;
+  
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    margin-bottom: 30px;
 }
 
 .title {
-    position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-
-.title h1 {
-    font-size: 24px;
-    font-weight: bold;
+    text-align: ledt;
+    flex: 1;    
 }
 
 .actions {
     display: flex;
-    align-items: center;
     margin-left: auto;
 }
 
@@ -43,40 +36,66 @@
     width: 150px;
 }
 
-/* .burger-menu {
-    cursor: pointer;
-}
-
-.icon {
-    width: 24px;
-    height: 24px;
-    stroke: white;
-} */
-
 .nav-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  margin: auto;
+  gap: 120px;
+  z-index: 1;
+}
+
+.nav-menu a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: white; /* 将线条颜色设置为白色 */
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
 }
 
 main {
-  margin-top: 80px;
+  margin-top: 130px;
 }
 
   .welcome {
     position: relative;
     margin: auto;
-    padding: 10px;
-    width: 500px;
+    width: 100%;
+    height: 500px;
     max-width: 100%;
     transition: transform 0.3s ease;
+    overflow: hidden;
+  }
+
+  .welcome-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border: none; /* 初始状态无边框 */
   }
 
   .welcome:hover {
     transform: scale(1.05);
     .overlay {
-      background-color:  #023047bb;
+      opacity: 1;
+      background-color: transparent;
     }
     .welcome-message {
       color:rgb(255, 255, 255);
@@ -88,17 +107,24 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.677);
+    background-color: transparent;
     padding: 10px;
+    width: 90%;
+    height: 90%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 400px;
     border-radius: 5px;
   }
 
   .welcome-message {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     width: 100%;
+    letter-spacing: 10px;
+    text-align: center;
     color:  #023047;
     }
 
@@ -171,11 +197,16 @@ main {
     display: block;
     opacity: 1; 
   }
+
+  .active {
+    display: block;
+}
   
   .newest-article {
     display: flex;
     overflow: hidden;
     gap: 10px;
+    margin-left: 15px;
     max-width: 100%;
   }
   
@@ -184,6 +215,9 @@ main {
     .article3
      {
       display: flex;
+      /* max-width: 100%; */
+      width: 550px;
+      max-width: 100%;
       flex-direction: column;
       background-color: transparent;
       color: #000000;
@@ -202,6 +236,8 @@ main {
         
         .article-main-section .discription {
           opacity: 1;
+          overflow-wrap: break-word;
+          white-space: normal;
           bottom: 20%;
         }
     }
@@ -218,6 +254,8 @@ main {
         
         .article-main-section2 .discription2 {
           opacity: 1;
+          overflow-wrap: break-word;
+          white-space: normal;
           bottom: 20%;
         }
     }
@@ -234,6 +272,8 @@ main {
         
         .article-main-section3 .discription3 {
           opacity: 1;
+          overflow-wrap: break-word;
+          white-space: normal;
           bottom: 20%;
         }
     }
@@ -264,29 +304,171 @@ main {
           opacity: 0;
           transition: all 0.3s ease;
         }
+    
+        .photo-gallery-container {
+          display: flex;
+          align-items: center;
+          overflow: hidden;
+          margin-top: 10px;
+          margin-left: 15px;
+          gap: 2px;
+          position: relative;
+          width: 100%;
+          height: 350px;
+        }
 
-  .photo-gallery {
+  /* .photo-gallery {
       display: flex;
       overflow: hidden;
       margin-top: 10px;
+      margin-left: 15px;
       height: 350px;
       gap: 2px;
       max-width: 100%;
       background: rgb(255, 255, 255);
       color: rgb(255, 255, 255);
+  } */
+
+  .photo-gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+  }
+  
+  .photo-gallery img {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .slide-left, .slide-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .slide-left {
+    left: 0;
+  }
+  
+  .slide-right {
+    right: 0;
+  }
+
+  @media(max-width: 768px) {
+    .overlay {
+      width: 75%;
+    }
+
+    .welcome-message {
+      font-size: 24px;
+      letter-spacing: 8px;
+    }
+
+    .container {
+      margin: auto;
+      margin-bottom: 30px;
+    }
+
+    .nav-menu {
+      margin: auto;
+      gap: 40px;
+      width: 100%
+    }
+    .card-list {
+      margin-left: 0;
+      width: 100%;
+      align-items: center;
+    }
+
+    .category-image {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .actions {
+      margin-left: 0;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .search {
+      width: 70%;
+      max-width: 300px; /* 根据需要调整最大宽度 */
+      margin-right: 0;
+    }
+
+    .overlay {
+      width: 70%;
+    }
+
+    .welcome-message {
+      font-size: 20px;
+      letter-spacing: 6px;
+    }
+
+    .container {
+      margin: auto;
+      flex-direction: column;
+      margin-bottom: 30px;
+
+    }
+
+    .nav-menu {
+      gap: 20px;
+      flex-direction: column;
+    }
+
+    .category-container {
+      flex-direction: column;
+    }
+
+    .card-list {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .card1, .card2, .card3 {
+      width: 100%;
+    }
+  
+    .category-image {
+      width: 100%;
+    }
+
+    .newest-article {
+      flex-direction: column;
+      width: 100%;
+      margin-left: 5px;
+      gap: 20px;
+    }
+    
+    .photo-gallery {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+        
+    .photo-gallery img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .hr-dark {
     border-color:#023047;
     border-width: 2px;
     margin: 20px;
-  }
-
-  .hr-white {
-    border-color:#ffffff;
-    width: 350px;
-    border-width: 0.5px;
-    margin: 0 auto;
   }
   
   .footer {

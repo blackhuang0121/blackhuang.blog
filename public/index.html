@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/tailwind.output.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="src/tailwind.css" />
+    <script src="./index.js" /></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -17,29 +17,24 @@
     <header class="header">
       <div class="container">
         <div class="title">
-            <h1>Blackhuang.blog</h1>
+            <h1 class="text-2xl text-white-800 font-bold">Blackhuang.blog</h1>
         </div>
         <div class="actions">
             <input type="text" placeholder="Search" class="search">
-            <!-- <div class="burger-menu" id="burger-menu">
-                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </div> -->
         </div>
       </div>
-      <hr class="hr-white">
+      <!-- <hr class="hr-white"> -->
       <nav class="nav-menu" id="nav-menu">
         <a href="travel.html">🧳 旅遊 Travel</a>
         <a href="photo.html">📷 攝影 Photo</a>
         <a href="note.html">✒️ 隨筆 Note</a>
       </nav>
-      <hr class="hr-white">
+      <!-- <hr class="hr-white"> -->
     </header>
     <main>
-      <hr class="hr-dark">
+      <!-- <hr class="hr-dark"> -->
       <div class="welcome">
-        <img src="img/DSCF4058.JPG" alt="graffiti" class="welcome-photo">
+        <img src="img/DSCF5553.JPG" alt="graffiti" class="welcome-photo">
         <div class="overlay">
           <p class="welcome-message">👋 嗨嗨你好！歡迎來到部落格</p>
         </div>
@@ -74,7 +69,7 @@
       </div>
       <hr class="hr-dark">
       <div>
-        <h2 class="text-2xl text-gray-800 font-bold">最新文章</h2>
+        <h2 class="text-2xl text-gray-800 font-bold m-4">最新文章</h2>
         <div class="newest-article">
           <div class="article1">
             <div class="hashtag">
@@ -129,18 +124,22 @@
         </div>
       </div>
       </main>
-      <div class="photo-gallery">
-        <img src="img/DSCF2870.JPG" alt="shoes">
-        <img src="img/DSCF2948.JPG" alt="Vintages lovers">
-        <img src="img/DSCF3383.JPG" alt="Flowers">
-        <img src="img/DSCF6055.JPG" alt="Family">
-        <img src="img/DSCF6055.JPG" alt="Family">
-        <img src="img/DSCF6055.JPG" alt="Family">
-        <img src="img/DSCF6055.JPG" alt="Family">
-        <img src="img/DSCF6055.JPG" alt="Family">
-        <img src="img/DSCF6055.JPG" alt="Family">
-        <img src="img/DSCF6055.JPG" alt="Family">
-        <img src="img/DSCF6055.JPG" alt="Family">
+      <div class="photo-gallery-container">
+        <button class="slide-left">&lt;</button>
+        <div class="photo-gallery">
+          <img src="img/DSCF2870.JPG" alt="shoes">
+          <img src="img/DSCF2948.JPG" alt="Vintages lovers">
+          <img src="img/DSCF3383.JPG" alt="Flowers">
+          <img src="img/DSCF6055.JPG" alt="Family">
+          <img src="img/DSCF6055.JPG" alt="Family">
+          <img src="img/DSCF6055.JPG" alt="Family">
+          <img src="img/DSCF6055.JPG" alt="Family">
+          <img src="img/DSCF6055.JPG" alt="Family">
+          <img src="img/DSCF6055.JPG" alt="Family">
+          <img src="img/DSCF6055.JPG" alt="Family">
+          <img src="img/DSCF6055.JPG" alt="Family">
+        </div>
+        <button class="slide-right">&gt;</button>
       </div>
   </body>
   <hr class="hr-dark">
@@ -152,5 +151,4 @@
     </div>
     <p class="flex justify-center">@2024 All Right Reserved</p>
   </footer>
-  <script src="./index.js"></script>
 </html>
