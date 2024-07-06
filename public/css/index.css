@@ -74,7 +74,7 @@ main {
     position: relative;
     margin: auto;
     width: 100%;
-    height: 500px;
+    height: 600px;
     max-width: 100%;
     transition: transform 0.3s ease;
     overflow: hidden;
@@ -215,8 +215,6 @@ main {
     .article3
      {
       display: flex;
-      /* max-width: 100%; */
-      width: 550px;
       max-width: 100%;
       flex-direction: column;
       background-color: transparent;
@@ -281,7 +279,7 @@ main {
         .article1 .article-image,
         .article2 .article-image2,
         .article3 .article-image3 {
-          width: 560px;
+          width: 550px;
           border-radius: 10px;
           transition: all 0.3s ease;
         }
@@ -376,7 +374,7 @@ main {
 
     .nav-menu {
       margin: auto;
-      gap: 40px;
+      gap: 30px;
       width: 100%
     }
     .card-list {
@@ -387,6 +385,15 @@ main {
 
     .category-image {
       width: 100%;
+    }
+
+    .newest-article {
+      display: flex;
+      overflow: hidden;
+      gap: 10px;
+      margin-left: 15px;
+      width: 100%;
+      max-width: 800px;
     }
   }
 
@@ -405,7 +412,7 @@ main {
 
     .search {
       width: 70%;
-      max-width: 300px; /* 根据需要调整最大宽度 */
+      max-width: 300px;
       margin-right: 0;
     }
 
@@ -463,6 +470,11 @@ main {
       max-width: 100%;
       height: auto;
     }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      } 
   }
 
   .hr-dark {
@@ -477,3 +489,65 @@ main {
     display: flex;
     align-items: center;
   }
+
+.about {
+  margin: 15px;
+  gap: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: start;
+  align-items: center;
+  background-color: #FDF0D5;
+  } 
+  .about-info {
+    font-size: 20px;
+  }
+    .about-info h1 {
+      font-size: 25px;
+      letter-spacing: 4px;
+  }
+
+  .about img {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+  }
+
+.about-contact {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  }
+
+.back-to-home-page {
+  display: flex;
+  justify-content: center;
+}
+.back-to-home-page a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+.back-to-home-page a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background: #023047; /* 将线条颜色设置为白色 */
+  transition: width 0.3s ease;
+}
+
+.back-to-home-page a:hover::after {
+  width: 100%;
+}
+
+.one-liner {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  font-size: 24px;
+  letter-spacing: 3px;
+}
