@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/tailwind.output.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="./index.js" /></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -12,12 +14,80 @@
     <title>Note</title>
   </head>
   <body>
-    <div class="container mx-auto">
-      <h1 class="text-lg font-bold tracking-tight text-gray-700">Hello World!</h1>
-      <p>this is travel page</p>
-      <p>Hello World</p>
-    </div>
-    <a href="index.html">Back to homepage</a>
-  </body>
-  <script src="./index.js"></script>
+    <header class="header">
+      <div class="container">
+          <div class="title">
+            <h1 class="text-2xl text-white-800 font-bold">Blackhuang.blog</h1>
+          </div>
+          <div class="actions">
+            <input type="text" placeholder="Search" class="search">
+          </div>
+      </div>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="travel.html">🧳 旅遊 Travel</a>
+        <a href="photo.html">📷 攝影 Photo</a>
+        <a href="note.html">✒️ 隨筆 Note</a>
+        <a href="about.html">🚶🏻 關於 About</a>
+      </nav>
+    </header>
+    <body>
+      <main>
+          <div class="mx-auto" id="category-banner">
+            <div class="welcome">
+              <img src="img/DSCF5753.JPG" alt="Paris">
+              <div class="overlay">
+                <p class="welcome-message">隨筆 Note</h1>
+              </div>
+            </div>
+            <p class="one-liner">\ 用文字咀嚼所見所想，紀錄片刻 /</p>
+          </div>
+          <hr class="hr-dark">
+          <div>
+            <h2 class="text-2xl text-gray-800 font-bold m-4">最新文章</h2>
+            <div class="newest-article">
+              <div class="article1">
+                <div class="hashtag">
+                  <i class='bx bxs-map'></i>
+                    <span>Leiden, Neatherlands</span>
+                </div>
+                <div class="article-main-section">
+                  <img class="article-image" src="img/DSCF3574.JPG" alt="the living place" />
+                  <p class="discription">離阿姆斯特丹搭火車約半小時的地方——萊登，也是這次去歐洲待的地方</p>
+                </div>
+              </div>  
+              <div class="article2">
+                <div class="hashtag">
+                  <i class='bx bxs-map'></i>
+                    <span>Amsterdam, Neatherlands</span>
+                </div>
+                <div class="article-main-section2">
+                  <img class="article-image2" src="img/DSCF1942.JPG" alt="city" />
+                  <p class="discription2">梵谷博物館旁的公園</p>
+                </div>
+              </div>
+              <div class="article3">
+                <div class="hashtag">
+                  <i class='bx bxs-map'></i>
+                    <span>Maastricht, Neatherlands</span>
+                </div>
+                <div class="article-main-section3">
+                  <img class="article-image3" src="img/DSCF6525.JPG" alt="dinner" />
+                  <p class="discription3">馬斯垂克位於荷比邊界，這裡也是慢節奏，早早便開吃</p>
+                </div>
+              </div>
+          </div>    
+        <div class="back-to-home-page">
+          <a href="index.html">👉 回到首頁</a>
+        </div>
+      </main>
+      <hr class="hr-dark">
+      <footer class="footer">
+        <div>
+          <a href="https://www.instagram.com/blackhuang.jpg/" class="text-xl"><i class='bx bxl-instagram'></i></a>
+          <a href="https://www.instagram.com/blackhuang.jpg/" class="text-xl"><i class='bx bxl-gmail'></i></a>
+          <a href="https://www.instagram.com/blackhuang.jpg/" class="text-xl"><i class='bx bxl-linkedin-square'></i></a>
+        </div>
+        <p class="flex justify-center">@2024 All Right Reserved</p>
+      </footer>
+    </body>
 </html>
