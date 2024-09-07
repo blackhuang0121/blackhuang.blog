@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/tailwind.output.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <script src="./index.js" /></script>
+    <script src="./index.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
@@ -16,13 +16,40 @@
   <body>
     <header class="header">
       <div class="container">
-        <div class="title">
-            <h1 class="text-2xl text-white-800 font-bold">Blackhuang.blog</h1>
-        </div>
+        <h1 class="text-2xl text-white-800 font-bold">
+          <a href="index.html" class="nav-logo">Blackhuang.blog</a>
+        </h1>
         <div class="actions">
             <input type="text" placeholder="Search" class="search">
+            <div class="burger-menu" id="burger-menu">
+              <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </div>
+            <div id="menu-overlay">
+              <div class="menu-content">
+                <ul>
+                  <li><a href="travel.html" class="menu-link">🧳 旅遊 Travel</a></li>
+                  <li><a href="photo.html" class="menu-link">📷 攝影 Photo</a></li>
+                  <li><a href="note.html" class="menu-link">✒️ 隨筆 Note</a></li>
+                  <li><a href="about.html" class="menu-link">🚶🏻 關於 About</a></li>
+                </ul>
+                <div id="close-btn">&times;</div>
+              </div>
+            </div>
         </div>
       </div>
+      <!-- <div class="fullscreen-nav" id="fullscreen-nav">
+        <div class="close-btn" id="close-btn">
+          <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </div>
+        <a href="travel.html">🧳 旅遊 Travel</a>
+        <a href="photo.html">📷 攝影 Photo</a>
+        <a href="note.html">✒️ 隨筆 Note</a>
+        <a href="about.html">🚶🏻 關於 About</a>
+      </div> -->
       <nav class="nav-menu" id="nav-menu">
         <a href="travel.html">🧳 旅遊 Travel</a>
         <a href="photo.html">📷 攝影 Photo</a>
@@ -49,7 +76,7 @@
           <div class="card2">
             <div class="bg-gray p-6 rounded-lg shadow-lg">
               <h4><a href="photo.html" class="text-2xl font-bold mb-2 text-gray-800" class="text-2xl font-bold mb-2 text-gray-800">📷 拍照</a></h4>
-              <p class="text-gray-700">喜歡照片的底片感，還有隨著光和影不同的色調變化</p>
+              <p class="text-gray-700">喜歡拍出的成品帶些底片特有的顆粒感，隨著光和影不同的色調變化</p>
             </div>
           </div>
           <div class="card3">
@@ -70,14 +97,16 @@
         <h2 class="text-2xl text-gray-800 font-bold m-4">最新文章</h2>
         <div class="newest-article">
           <div class="article1">
-            <div class="hashtag">
-              <i class='bx bxs-map'></i>
-                <span>Leiden, Neatherlands</span>
-            </div>
-            <div class="article-main-section">
-              <img class="article-image" src="img/DSCF3574.JPG" alt="the living place" />
-              <p class="discription">離阿姆斯特丹搭火車約半小時的地方——萊登，也是這次去歐洲待的地方</p>
-            </div>
+            <a href="article.html" class="article-link">
+              <div class="hashtag">
+                <i class='bx bxs-map'></i>
+                  <span>Leiden, Neatherlands</span>
+              </div>
+              <div class="article-main-section">
+                <img class="article-image" src="img/DSCF3574.JPG" alt="the living place" />
+                <p class="discription">離阿姆斯特丹搭火車約半小時的地方——萊登，也是這次去歐洲待的地方</p>
+              </div>
+            </a>
           </div>  
           <div class="article2">
             <div class="hashtag">
@@ -124,17 +153,11 @@
       <div class="photo-gallery-container">
         <button class="slide-left">&lt;</button>
         <div class="photo-gallery">
-          <img src="img/DSCF2870.JPG" alt="shoes">
-          <img src="img/DSCF2948.JPG" alt="Vintages lovers">
-          <img src="img/DSCF3383.JPG" alt="Flowers">
-          <img src="img/DSCF6055.JPG" alt="Family">
-          <img src="img/DSCF6055.JPG" alt="Family">
-          <img src="img/DSCF6055.JPG" alt="Family">
-          <img src="img/DSCF6055.JPG" alt="Family">
-          <img src="img/DSCF6055.JPG" alt="Family">
-          <img src="img/DSCF6055.JPG" alt="Family">
-          <img src="img/DSCF6055.JPG" alt="Family">
-          <img src="img/DSCF6055.JPG" alt="Family">
+          <img src="img/DSCF2516.JPG" alt="Coffee in Brussels">
+          <img src="img/DSCF3835.JPG" alt="Notting hills">
+          <img src="img/DSCF3175.JPG" alt="Windmills">
+          <img src="img/DSCF5753.JPG" alt="Paris">
+          <img src="img/DSCF2901.JPG" alt="Anterp">
         </div>
         <button class="slide-right">&gt;</button>
       </div>
@@ -147,6 +170,6 @@
       <a href="https://www.instagram.com/blackhuang.jpg/" class="text-xl"><i class='bx bxl-gmail'></i></a>
       <a href="https://www.instagram.com/blackhuang.jpg/" class="text-xl"><i class='bx bxl-linkedin-square'></i></a>
     </div>
-    <p class="flex justify-center">@2024 All Right Reserved</p>
+    <p class="flex justify-center">&copy; 2024 Blackhuang.blog. All Right Reserved.</p>
   </footer>
 </html>
