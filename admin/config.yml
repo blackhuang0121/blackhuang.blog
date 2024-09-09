@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: netlify-deploy  # 設定為你的 Netlify 部署分支
+
+media_folder: "static/images/uploads"  # 上傳媒體的路徑
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "select", options: ["travel", "photos", "notes"]}
