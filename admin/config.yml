@@ -1,9 +1,7 @@
 backend:
   name: git-gateway
-  branch: netlify-deploy  # 設定為你的 Netlify 部署分支
-  repo: "blackhuang0121/blackhuang.blog"  # 你的 GitHub repo
-  site_url: "https://blackhuang-blog.netlify.app"  # 你的 Netlify 網站地址
 
+publish_mode: editorial_workflow
 media_folder: "static/images/uploads"  # 上傳媒體的路徑
 public_folder: "/images/uploads"
 
