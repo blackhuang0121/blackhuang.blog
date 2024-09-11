@@ -1,3 +1,7 @@
+[build]
+  command = ""  # 如果不需要編譯過程，這裡可以留空
+  publish = "public"  # 指定靜態文件的資料夾
+
 [[redirects]]
   from = "/admin/*"
   to = "/admin/index.html"
