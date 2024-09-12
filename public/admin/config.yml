@@ -1,0 +1,20 @@
+backend:
+  name: git-gateway
+  branch: master
+  auth:
+    roles: ["admin", "editor"]  # 定義角色
+
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"  # 上傳媒體的路徑
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category", name: "category", widget: "select", options: ["旅遊 Travel", "攝影 Photos", "隨筆 Notes"]}
