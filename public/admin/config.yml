@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: netlify-deploy
+  branch: master
   auth:
     roles: ["admin", "editor"]  # 定義角色
 
@@ -17,4 +17,4 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Category", name: "category", widget: "select", options: ["travel", "photos", "notes"]}
+      - {label: "Category", name: "category", widget: "select", options: ["旅遊 Travel", "攝影 Photos", "隨筆 Notes"]}
