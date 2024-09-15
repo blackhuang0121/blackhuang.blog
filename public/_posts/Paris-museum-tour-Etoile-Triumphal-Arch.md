@@ -1,6 +1,6 @@
 ---
 title: 巴黎｜漫步香榭麗舍大道與巴黎博物館巡禮：凱旋門篇
-slug: Paris-museum-tour-Etoile-Triumphal-Arch
+slug: paris-museum-tour-etoile-triumphal-arch
 date: 2024-09-14T17:28:02.559Z
 updated: 2024-09-14T17:28:02.564Z
 featured_image: https://live.staticflickr.com/65535/53989101602_30cc253283.jpg
