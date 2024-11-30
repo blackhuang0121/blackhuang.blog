@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: netlify-deploy  # 要發佈的分支
+
+media_folder: "static/images/uploads"  # 媒體上傳資料夾
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog"
+    label: "文章"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "標題", name: "title", widget: "string" }
+      - { label: "發佈日期", name: "published_date", widget: "datetime" }
+      - { label: "修改日期", name: "updated_date", widget: "datetime" }
+      - { label: "內文", name: "body", widget: "markdown" }
+      - { label: "封面圖片", name: "featured_image", widget: "image", }
+      - { label: "標籤", name: "tags", widget: "list", }
+      - { label: "分類", name: "category", widget: "select", options: ["旅遊 Travel", "攝影 Photos", "隨筆Notes"], }
+
+
