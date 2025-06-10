@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: netlify-deploy  # 要發佈的分支
+  branch: netlify-hugo-deploy  # 要發佈的分支
 
 media_folder: "static/images/uploads"  # 媒體上傳資料夾
 public_folder: "/images/uploads"
@@ -18,6 +18,6 @@ collections:
       - { label: "內文", name: "body", widget: "markdown" }
       - { label: "封面圖片", name: "featured_image", widget: "image", }
       - { label: "標籤", name: "tags", widget: "list", }
-      - { label: "分類", name: "category", widget: "select", options: ["旅遊 Travel", "攝影 Photos", "隨筆Notes"], }
+      - { label: "分類", name: "category", widget: "select", options: ["旅遊 Travel", "攝影 Photos", "隨筆 Notes"], }
 
 
